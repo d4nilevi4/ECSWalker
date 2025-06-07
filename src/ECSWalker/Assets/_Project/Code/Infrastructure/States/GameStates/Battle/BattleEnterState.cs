@@ -20,10 +20,8 @@ namespace ECSWalker.Infrastructure
             await _stateMachine.Enter<BattleLoopState>();
         }
 
-        public UniTask Exit()
-        {
-            return UniTask.CompletedTask;
-        }
+        public UniTask Exit() =>
+            UniTask.CompletedTask;
 
         private void PlaceHero()
         {
