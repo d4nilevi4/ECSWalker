@@ -32,7 +32,7 @@ The following assets are used in the project but are **excluded from the reposit
 
 ## 🧩 Folder Structure (Short Summary)
 
-Assets/
+Assets/\n
 ├── _Project/
 │   └── Code/ 					# The entire project code
 │   └── Scenes/					# All used scenes in project
