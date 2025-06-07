@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Entitas;
 
 namespace ECSWalker.Infrastructure
@@ -21,7 +22,7 @@ namespace ECSWalker.Infrastructure
         {
             foreach (GameEntity entity in _entities.GetEntities(_buffer))
             {
-                _entityViewFactory.CreateViewForEntity(entity);
+                _entityViewFactory.CreateViewForEntity(entity).Forget();
             }
         }
     }

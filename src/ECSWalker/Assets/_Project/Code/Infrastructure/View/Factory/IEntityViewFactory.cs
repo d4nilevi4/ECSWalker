@@ -1,8 +1,12 @@
-﻿namespace ECSWalker.Infrastructure
+﻿using Cysharp.Threading.Tasks;
+using JetBrains.Annotations;
+
+namespace ECSWalker.Infrastructure
 {
     public interface IEntityViewFactory
     {
-        EntityBehaviour CreateViewForEntity(GameEntity entity);
+        [MustUseReturnValue]
+        UniTask<EntityBehaviour> CreateViewForEntity(GameEntity entity);
         EntityBehaviour CreateViewForEntityFromPrefab(GameEntity entity);
     }
 }

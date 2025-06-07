@@ -1,11 +1,11 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace ECSWalker.Infrastructure
 {
     public interface IAssetProvider
     {
-        GameObject LoadAsset(string path);
-        T LoadAsset<T>(string path) where T : Object;
-        T[] LoadAll<T>(string path) where T : Object;
+        UniTask<T> LoadAsset<T>(string path) where T : Object;
+        UniTask<T[]> LoadAll<T>(string path) where T : Object;
     }
 }

@@ -1,22 +1,14 @@
-﻿using UnityEngine;
+﻿using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace ECSWalker.Infrastructure
 {
     public class AssetProvider : IAssetProvider
     {
-        public GameObject LoadAsset(string path)
-        {
-            return Resources.Load<GameObject>(path);
-        }
+        public UniTask<T> LoadAsset<T>(string path) where T : Object =>
+            new(Resources.Load<T>(path));
 
-        public T LoadAsset<T>(string path) where T : Object
-        {
-            return Resources.Load<T>(path);
-        }
-
-        public T[] LoadAll<T>(string path) where T : Object
-        {
-            return Resources.LoadAll<T>(path);
-        }
+        public UniTask<T[]> LoadAll<T>(string path) where T : Object => 
+            new (Resources.LoadAll<T>(path));
     }
 }

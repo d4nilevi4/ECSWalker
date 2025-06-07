@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
@@ -15,9 +16,9 @@ namespace ECSWalker.Infrastructure
             _instantiator = instantiator;
         }
         
-        public EntityBehaviour CreateViewForEntity(GameEntity entity)
+        public async UniTask<EntityBehaviour> CreateViewForEntity(GameEntity entity)
         {
-            EntityBehaviour viewPrefab = _assetProvider.LoadAsset<EntityBehaviour>(entity.ViewPath);
+            EntityBehaviour viewPrefab = await _assetProvider.LoadAsset<EntityBehaviour>(entity.ViewPath);
             EntityBehaviour view = _instantiator.InstantiatePrefabForComponent<EntityBehaviour>(
                 viewPrefab,
                 position: entity.hasWorldPosition ? entity.WorldPosition : _farAway,
