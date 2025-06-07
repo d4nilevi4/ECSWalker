@@ -21,8 +21,6 @@ namespace ECSWalker.Infrastructure
         {
             _staticDataService.LoadAll();
             
-            Debug.Log("LoadProgressState");
-
             await _stateMachine.Enter<LoadProgressState>();
         }
 

@@ -24,6 +24,7 @@ namespace ECSWalker.Infrastructure
                 await _stateMachine.Enter<LoadingBattleState, string>(sceneName);
                 PlayerPrefs.DeleteKey(key);
                 PlayerPrefs.Save();
+                return;
             }
 #endif
             throw new NotImplementedException();
