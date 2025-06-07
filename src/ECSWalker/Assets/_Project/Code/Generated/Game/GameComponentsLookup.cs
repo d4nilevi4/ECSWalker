@@ -8,15 +8,42 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
+    public const int Destructed = 0;
+    public const int SelfDestructTimer = 1;
+    public const int View = 2;
+    public const int ViewPath = 3;
+    public const int ViewPrefab = 4;
+    public const int CanAct = 5;
+    public const int Id = 6;
+    public const int PositionOffset = 7;
+    public const int Transform = 8;
+    public const int WorldPosition = 9;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
-
+        "Destructed",
+        "SelfDestructTimer",
+        "View",
+        "ViewPath",
+        "ViewPrefab",
+        "CanAct",
+        "Id",
+        "PositionOffset",
+        "Transform",
+        "WorldPosition"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(ECSWalker.Common.CommonComponents.Destructed),
+        typeof(ECSWalker.Common.CommonComponents.SelfDestructTimer),
+        typeof(ECSWalker.Common.CommonComponents.View),
+        typeof(ECSWalker.Common.CommonComponents.ViewPath),
+        typeof(ECSWalker.Common.CommonComponents.ViewPrefab),
+        typeof(ECSWalker.Gameplay.CanAct),
+        typeof(ECSWalker.Gameplay.Id),
+        typeof(ECSWalker.Gameplay.PositionOffset),
+        typeof(ECSWalker.Gameplay.TransformComponent),
+        typeof(ECSWalker.Gameplay.WorldPosition)
     };
 }

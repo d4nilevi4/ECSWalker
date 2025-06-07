@@ -1,0 +1,34 @@
+﻿using Cysharp.Threading.Tasks;
+using ECSWalker.Gameplay.StaticData;
+using UnityEngine;
+
+namespace ECSWalker.Infrastructure
+{
+    public class BootstrapState : IState
+    {
+        private readonly IGameStateMachine _stateMachine;
+        private readonly IStaticDataService _staticDataService;
+
+        public BootstrapState(
+            IGameStateMachine stateMachine,
+            IStaticDataService staticDataService)
+        {
+            _stateMachine = stateMachine;
+            _staticDataService = staticDataService;
+        }
+
+        public async UniTask Enter()
+        {
+            _staticDataService.LoadAll();
+            
+            Debug.Log("LoadProgressState");
+
+            await _stateMachine.Enter<LoadProgressState>();
+        }
+
+        public UniTask Exit()
+        {
+            return UniTask.CompletedTask;
+        }
+    }
+}
