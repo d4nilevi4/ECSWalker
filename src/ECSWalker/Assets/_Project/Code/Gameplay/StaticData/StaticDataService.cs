@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using ECSWalker.Infrastructure;
 
 namespace ECSWalker.Gameplay.StaticData
@@ -11,8 +12,9 @@ namespace ECSWalker.Gameplay.StaticData
             _assetProvider = assetProvider;
         }
 
-        public void LoadAll()
+        public UniTask LoadAll()
         {
+            return UniTask.CompletedTask;
         }
         
     }

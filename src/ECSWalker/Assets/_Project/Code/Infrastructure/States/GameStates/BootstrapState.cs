@@ -18,7 +18,7 @@ namespace ECSWalker.Infrastructure
 
         public async UniTask Enter()
         {
-            _staticDataService.LoadAll();
+            await _staticDataService.LoadAll();
             
             await _stateMachine.Enter<LoadProgressState>();
         }
