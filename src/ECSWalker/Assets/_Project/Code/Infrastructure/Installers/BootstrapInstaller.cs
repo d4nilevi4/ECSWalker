@@ -45,6 +45,8 @@ namespace ECSWalker.Infrastructure
         {
             Container.BindInterfacesAndSelfTo<BootstrapState>().AsSingle();
             Container.BindInterfacesAndSelfTo<LoadProgressState>().AsSingle();
+            Container.BindInterfacesAndSelfTo<LoadingMenuState>().AsSingle();
+            Container.BindInterfacesAndSelfTo<MenuLoopState>().AsSingle();
             Container.BindInterfacesAndSelfTo<LoadingBattleState>().AsSingle();
             Container.BindInterfacesAndSelfTo<BattleEnterState>().AsSingle();
             Container.BindInterfacesAndSelfTo<BattleLoopState>().AsSingle();
