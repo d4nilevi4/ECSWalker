@@ -16,7 +16,6 @@ The project contains:
 
 - **Unity** (version 6000.0.32f1)
 - **Entitas** ECS Framework ([link](https://github.com/sschmid/Entitas))
-- **C# .NET Standard 2.1**
 - **UniTask** for async programming ([link](https://github.com/Cysharp/UniTask))
 - **Zenject** DI Framework ([link](https://github.com/modesttree/Zenject))
 
@@ -26,17 +25,17 @@ The project contains:
 
 The following assets are used in the project but are **excluded from the repository**. You need to import them manually into the Unity project for everything to compile and work properly.
 
-### 1. [A* Pathfinding Project Pro](https://assetstore.unity.com/packages/tools/behavior-ai/a-pathfinding-project-pro-87744)
+#### 1. [A* Pathfinding Project Pro](https://assetstore.unity.com/packages/tools/behavior-ai/a-pathfinding-project-pro-87744)
 
 ---
 
 ## 🧩 Folder Structure (Short Summary)
 
-Assets/\n
-├── _Project/
-│   └── Code/ 					# The entire project code
-│   └── Scenes/					# All used scenes in project
-├── Entitas/  					# EntitasECS code
-├── Packages/ 					# Packeges installed via NuGet for Unity
-├── Setting/ 					# Project settings, includes Render Pipeline setting and Input settings
+Assets/\
+├── _Project/\
+│   └── Code/ # The entire project code\
+│   └── Scenes/ # All used scenes in project\
+├── Entitas/ # EntitasECS code\
+├── Packages/ # Packeges installed via NuGet for Unity\
+├── Setting/ # Project settings, includes Render Pipeline setting and  Input settings
 ---
