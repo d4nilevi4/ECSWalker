@@ -26,7 +26,7 @@ namespace ECSWalker.Infrastructure
                 PlayerPrefs.Save();
             }
 
-            SceneManager.LoadScene("Boot");
+            SceneManager.LoadScene(Scenes.BOOT);
         }
 #endif
     }

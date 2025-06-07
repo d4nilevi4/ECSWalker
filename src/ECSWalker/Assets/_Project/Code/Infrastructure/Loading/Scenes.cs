@@ -2,6 +2,8 @@
 {
     public static class Scenes
     {
-        public const string Battle = "Battle";
+        public const string BATTLE = "Battle";
+        public const string MAIN_MENU = "MainMenu";
+        public const string BOOT = "Boot";
     }
 }

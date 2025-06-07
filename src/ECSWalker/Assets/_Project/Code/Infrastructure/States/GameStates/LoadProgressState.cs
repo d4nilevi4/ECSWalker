@@ -1,5 +1,4 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace ECSWalker.Infrastructure
@@ -27,7 +26,7 @@ namespace ECSWalker.Infrastructure
                 return;
             }
 #endif
-            throw new NotImplementedException();
+            await _stateMachine.Enter<LoadingMenuState>();
         }
 
         public UniTask Exit() =>

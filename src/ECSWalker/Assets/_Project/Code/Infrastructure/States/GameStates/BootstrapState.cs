@@ -1,6 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
 using ECSWalker.Gameplay.StaticData;
-using UnityEngine;
 
 namespace ECSWalker.Infrastructure
 {
@@ -24,9 +23,7 @@ namespace ECSWalker.Infrastructure
             await _stateMachine.Enter<LoadProgressState>();
         }
 
-        public UniTask Exit()
-        {
-            return UniTask.CompletedTask;
-        }
+        public UniTask Exit() =>
+            UniTask.CompletedTask;
     }
 }
