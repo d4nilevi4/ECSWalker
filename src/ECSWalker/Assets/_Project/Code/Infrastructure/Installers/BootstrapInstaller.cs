@@ -1,4 +1,5 @@
 using System;
+using _Project.Code.Gameplay.Features.Hero.Factory;
 using Cysharp.Threading.Tasks;
 using ECSWalker.Common;
 using ECSWalker.Gameplay;
@@ -102,6 +103,7 @@ namespace ECSWalker.Infrastructure
         private void BindGameplayFactories()
         {
             Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
+            Container.Bind<IHeroFactory>().To<HeroFactory>().AsSingle();
         }
 
         private void BindEntityIndices()

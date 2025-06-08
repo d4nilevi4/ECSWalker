@@ -13,7 +13,7 @@ public static class GameComponentsLookup {
     public const int View = 2;
     public const int ViewPath = 3;
     public const int ViewPrefab = 4;
-    public const int CanAct = 5;
+    public const int Hero = 5;
     public const int Id = 6;
     public const int AffectedByGravity = 7;
     public const int DesiredVelocity = 8;
@@ -37,7 +37,7 @@ public static class GameComponentsLookup {
         "View",
         "ViewPath",
         "ViewPrefab",
-        "CanAct",
+        "Hero",
         "Id",
         "AffectedByGravity",
         "DesiredVelocity",
@@ -60,7 +60,7 @@ public static class GameComponentsLookup {
         typeof(ECSWalker.Common.CommonComponents.View),
         typeof(ECSWalker.Common.CommonComponents.ViewPath),
         typeof(ECSWalker.Common.CommonComponents.ViewPrefab),
-        typeof(ECSWalker.Gameplay.CanAct),
+        typeof(ECSWalker.Gameplay.Hero.Hero),
         typeof(ECSWalker.Gameplay.Id),
         typeof(ECSWalker.Gameplay.Movement.AffectedByGravity),
         typeof(ECSWalker.Gameplay.Movement.DesiredVelocity),

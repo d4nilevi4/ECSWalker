@@ -8,5 +8,4 @@ namespace ECSWalker.Gameplay
     [Game] public class WorldPosition : IComponent { public Vector3 Value; }
     [Game] public class PositionOffset : IComponent { public Vector3 Value; }
     [Game] public class TransformComponent : IComponent { public Transform Value; }
-    [Game] public class CanAct : IComponent { }
 }

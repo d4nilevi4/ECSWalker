@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherCanAct;
+    static Entitas.IMatcher<GameEntity> _matcherHero;
 
-    public static Entitas.IMatcher<GameEntity> CanAct {
+    public static Entitas.IMatcher<GameEntity> Hero {
         get {
-            if (_matcherCanAct == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.CanAct);
+            if (_matcherHero == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Hero);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherCanAct = matcher;
+                _matcherHero = matcher;
             }
 
-            return _matcherCanAct;
+            return _matcherHero;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly ECSWalker.Gameplay.CanAct canActComponent = new ECSWalker.Gameplay.CanAct();
+    static readonly ECSWalker.Gameplay.Hero.Hero heroComponent = new ECSWalker.Gameplay.Hero.Hero();
 
-    public bool isCanAct {
-        get { return HasComponent(GameComponentsLookup.CanAct); }
+    public bool isHero {
+        get { return HasComponent(GameComponentsLookup.Hero); }
         set {
-            if (value != isCanAct) {
-                var index = GameComponentsLookup.CanAct;
+            if (value != isHero) {
+                var index = GameComponentsLookup.Hero;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : canActComponent;
+                            : heroComponent;
 
                     AddComponent(index, component);
                 } else {
