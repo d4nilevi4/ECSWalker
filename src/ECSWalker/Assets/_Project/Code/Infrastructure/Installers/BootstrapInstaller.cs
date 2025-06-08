@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using ECSWalker.Common;
 using ECSWalker.Gameplay;
 using ECSWalker.Gameplay.Cameras;
+using ECSWalker.Gameplay.Input;
 using ECSWalker.Gameplay.StaticData;
 using UnityEngine;
 using Zenject;
@@ -86,7 +87,7 @@ namespace ECSWalker.Infrastructure
 
         private void BindInputService()
         {
-            // Container.BindInterfacesTo<InputService>().AsSingle();
+            Container.BindInterfacesTo<InputProvider>().AsSingle();
         }
 
         private void BindGameplayServices()

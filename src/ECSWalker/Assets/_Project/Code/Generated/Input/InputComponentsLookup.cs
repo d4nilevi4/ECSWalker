@@ -9,14 +9,26 @@
 public static class InputComponentsLookup {
 
     public const int Destructed = 0;
+    public const int CameraRelativeInput = 1;
+    public const int Input = 2;
+    public const int InputAxis = 3;
+    public const int WorldInput = 4;
 
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
-        "Destructed"
+        "Destructed",
+        "CameraRelativeInput",
+        "Input",
+        "InputAxis",
+        "WorldInput"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(ECSWalker.Common.CommonComponents.Destructed)
+        typeof(ECSWalker.Common.CommonComponents.Destructed),
+        typeof(ECSWalker.Gameplay.Input.CameraRelativeInput),
+        typeof(ECSWalker.Gameplay.Input.Input),
+        typeof(ECSWalker.Gameplay.Input.InputAxis),
+        typeof(ECSWalker.Gameplay.Input.WorldInput)
     };
 }

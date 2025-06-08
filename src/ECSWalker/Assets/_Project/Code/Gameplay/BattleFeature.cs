@@ -1,4 +1,5 @@
 ﻿using ECSWalker.Common;
+using ECSWalker.Gameplay.Input;
 using ECSWalker.Infrastructure;
 
 namespace ECSWalker.Gameplay
@@ -9,6 +10,8 @@ namespace ECSWalker.Gameplay
             ISystemFactory systemFactory
         )
         {
+            Add(systemFactory.Create<InputFeature>());
+            
             Add(systemFactory.Create<BindViewFeature>());
         }
     }
