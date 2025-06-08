@@ -1,0 +1,18 @@
+{
+    "name": "ECSWalker.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f8a6c16f4807be245b7272addb82390a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
