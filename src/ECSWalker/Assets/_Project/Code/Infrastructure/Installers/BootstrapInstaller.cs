@@ -4,6 +4,7 @@ using ECSWalker.Common;
 using ECSWalker.Gameplay;
 using ECSWalker.Gameplay.Cameras;
 using ECSWalker.Gameplay.Input;
+using ECSWalker.Gameplay.Levels;
 using ECSWalker.Gameplay.StaticData;
 using UnityEngine;
 using Zenject;
@@ -94,7 +95,7 @@ namespace ECSWalker.Infrastructure
         {
             Container.Bind<ITimeService>().To<UnityTimeService>().AsSingle();
             Container.Bind<ICameraProvider>().To<CameraProvider>().AsSingle();
-            // Container.Bind<ILevelDataProvider>().To<LevelDataProvider>().AsSingle();
+            Container.Bind<ILevelDataProvider>().To<LevelDataProvider>().AsSingle();
             Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
         }
 
