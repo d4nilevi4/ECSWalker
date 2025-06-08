@@ -161,7 +161,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1183832677}
+  m_Mesh: {fileID: 231775865}
 --- !u!33 &8482025
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -641,7 +641,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 231775865}
+  m_Mesh: {fileID: 616713759}
 --- !u!33 &448503406
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -2586,7 +2586,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2032253654}
+  m_Mesh: {fileID: 1183832677}
 --- !u!33 &1327867805
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -7584,6 +7584,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1674737896}
   - component: {fileID: 1674737895}
+  - component: {fileID: 1674737898}
+  - component: {fileID: 1674737897}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -7604,7 +7606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
-  _monoInstallers: []
+  _monoInstallers:
+  - {fileID: 1674737898}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -7637,6 +7640,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674737897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674737894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e3aa23f310478abfd9bbe1372c52e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCamera: {fileID: 939129721}
+--- !u!114 &1674737898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674737894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8a96776feb435f9dde6a7ee158c79a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Initializers:
+  - {fileID: 1674737897}
 --- !u!1 &1925973825
 GameObject:
   m_ObjectHideFlags: 0
