@@ -1,4 +1,5 @@
-﻿using ECSWalker.Common;
+﻿using _Project.Code.Gameplay.Features.Movement;
+using ECSWalker.Common;
 using ECSWalker.Gameplay.Input;
 using ECSWalker.Infrastructure;
 
@@ -13,6 +14,8 @@ namespace ECSWalker.Gameplay
             Add(systemFactory.Create<InputFeature>());
             
             Add(systemFactory.Create<BindViewFeature>());
+            
+            Add(systemFactory.Create<MovementFeature>());
         }
     }
 }

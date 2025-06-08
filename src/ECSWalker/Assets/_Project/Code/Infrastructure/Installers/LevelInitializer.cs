@@ -7,6 +7,7 @@ namespace ECSWalker.Infrastructure
     public class LevelInitializer : MonoBehaviour
     {
         public Camera MainCamera;
+        public Transform PlayerSpawnPoint;
         
         private ICameraProvider _cameraProvider;
 

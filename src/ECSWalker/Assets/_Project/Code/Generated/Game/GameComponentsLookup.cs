@@ -15,11 +15,21 @@ public static class GameComponentsLookup {
     public const int ViewPrefab = 4;
     public const int CanAct = 5;
     public const int Id = 6;
-    public const int PositionOffset = 7;
-    public const int Transform = 8;
-    public const int WorldPosition = 9;
+    public const int AffectedByGravity = 7;
+    public const int DesiredVelocity = 8;
+    public const int Direction = 9;
+    public const int MovableByRigidbody = 10;
+    public const int MovementAvailable = 11;
+    public const int Moving = 12;
+    public const int Rigidbody = 13;
+    public const int SlideOnSurface = 14;
+    public const int Speed = 15;
+    public const int SyncTransformPosition = 16;
+    public const int PositionOffset = 17;
+    public const int Transform = 18;
+    public const int WorldPosition = 19;
 
-    public const int TotalComponents = 10;
+    public const int TotalComponents = 20;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -29,6 +39,16 @@ public static class GameComponentsLookup {
         "ViewPrefab",
         "CanAct",
         "Id",
+        "AffectedByGravity",
+        "DesiredVelocity",
+        "Direction",
+        "MovableByRigidbody",
+        "MovementAvailable",
+        "Moving",
+        "Rigidbody",
+        "SlideOnSurface",
+        "Speed",
+        "SyncTransformPosition",
         "PositionOffset",
         "Transform",
         "WorldPosition"
@@ -42,6 +62,16 @@ public static class GameComponentsLookup {
         typeof(ECSWalker.Common.CommonComponents.ViewPrefab),
         typeof(ECSWalker.Gameplay.CanAct),
         typeof(ECSWalker.Gameplay.Id),
+        typeof(ECSWalker.Gameplay.Movement.AffectedByGravity),
+        typeof(ECSWalker.Gameplay.Movement.DesiredVelocity),
+        typeof(ECSWalker.Gameplay.Movement.Direction),
+        typeof(ECSWalker.Gameplay.Movement.MovableByRigidbody),
+        typeof(ECSWalker.Gameplay.Movement.MovementAvailable),
+        typeof(ECSWalker.Gameplay.Movement.Moving),
+        typeof(ECSWalker.Gameplay.Movement.RigidbodyComponent),
+        typeof(ECSWalker.Gameplay.Movement.SlideOnSurface),
+        typeof(ECSWalker.Gameplay.Movement.Speed),
+        typeof(ECSWalker.Gameplay.Movement.SyncTransformPosition),
         typeof(ECSWalker.Gameplay.PositionOffset),
         typeof(ECSWalker.Gameplay.TransformComponent),
         typeof(ECSWalker.Gameplay.WorldPosition)
