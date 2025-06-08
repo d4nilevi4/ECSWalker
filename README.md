@@ -35,7 +35,7 @@ Assets/\
 ├── _Project/\
 │   └── Code/ # The entire project code\
 │   └── Scenes/ # All used scenes in project\
+│   └── Setting/ # Project settings, includes Render Pipeline setting and  Input settings\
 ├── Entitas/ # EntitasECS code\
 ├── Packages/ # Packeges installed via NuGet for Unity\
-├── Setting/ # Project settings, includes Render Pipeline setting and  Input settings
 ---
