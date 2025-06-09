@@ -28,6 +28,7 @@ namespace _Project.Code.Gameplay.Features.Hero.Factory
                     .With(x => x.isMovableByRigidbody = true)
                     .With(x => x.isMovementAvailable = true)
                     .With(x => x.isAffectedByGravity = true)
+                    .With(x => x.isSlideOnSurface = true)
                     .With(x => x.isHero = true)
                 ;
         }

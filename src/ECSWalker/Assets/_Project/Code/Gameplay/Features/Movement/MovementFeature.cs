@@ -10,6 +10,7 @@ namespace _Project.Code.Gameplay.Features.Movement
         {
             Add(systemFactory.Create<SetVelocityByDirectionSystem>());
             
+            Add(systemFactory.Create<AlignDirectionToSurfaceSystem>());
             Add(systemFactory.Create<AdjustSpeedSystem>());
             Add(systemFactory.Create<ApplyGravitySystem>());
             

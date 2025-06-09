@@ -24,8 +24,8 @@ namespace ECSWalker.Gameplay.Movement
             foreach (GameEntity e in _gravityEntities)
             {
                 Vector3 velocity = e.DesiredVelocity;
-
-                velocity.y = velocity.y + GRAVITY + e.Rigidbody.linearVelocity.x;
+                
+                velocity.y += GRAVITY;
 
                 e.ReplaceDesiredVelocity(velocity);
             }
