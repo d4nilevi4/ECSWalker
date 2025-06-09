@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
+using ECSWalker.Common;
 using Entitas;
 using ECSWalker.Common.Entity;
+using ECSWalker.Gameplay.Hero;
 using UnityEngine;
 
 // ReSharper disable once CheckNamespace
@@ -30,8 +33,8 @@ public sealed partial class GameEntity : INamedEntity
             {
                 switch (component.GetType().Name)
                 {
-                    // case nameof(Hero):
-                        // return PrintHero();
+                    case nameof(Hero):
+                        return PrintHero();
                 }
             }
         }
@@ -43,12 +46,12 @@ public sealed partial class GameEntity : INamedEntity
         return components.First().GetType().Name;
     }
     
-    // private string PrintHero()
-    // {
-        // return new StringBuilder($"Hero ")
-            // .With(s => s.Append($"Id:{Id}"), when: hasId)
-            // .ToString();
-    // }
+    private string PrintHero()
+    {
+        return new StringBuilder($"Player ")
+            .With(s => s.Append($"Id:{Id}"), when: hasId)
+            .ToString();
+    }
 
     public string BaseToString() => base.ToString();
 }
