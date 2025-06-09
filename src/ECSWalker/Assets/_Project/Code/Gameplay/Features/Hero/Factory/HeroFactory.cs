@@ -21,12 +21,13 @@ namespace _Project.Code.Gameplay.Features.Hero.Factory
             return CreateEntity.Empty()
                     .AddId(_identifierService.Next())
                     .AddWorldPosition(at)
+                    .AddViewPath("Gameplay/Characters/Player/[Character] Player")
                     .AddDesiredVelocity(Vector3.zero)
                     .AddDirection(Vector3.zero)
                     .AddSpeed(5f)
-                    .AddViewPath("Gameplay/Characters/Player/[Character] Player")
                     .With(x => x.isMovableByRigidbody = true)
                     .With(x => x.isMovementAvailable = true)
+                    .With(x => x.isAffectedByGravity = true)
                     .With(x => x.isHero = true)
                 ;
         }

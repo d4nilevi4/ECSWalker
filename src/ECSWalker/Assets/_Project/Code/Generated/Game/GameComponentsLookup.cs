@@ -13,23 +13,26 @@ public static class GameComponentsLookup {
     public const int View = 2;
     public const int ViewPath = 3;
     public const int ViewPrefab = 4;
-    public const int Hero = 5;
-    public const int Id = 6;
-    public const int AffectedByGravity = 7;
-    public const int DesiredVelocity = 8;
-    public const int Direction = 9;
-    public const int MovableByRigidbody = 10;
-    public const int MovementAvailable = 11;
-    public const int Moving = 12;
-    public const int Rigidbody = 13;
-    public const int SlideOnSurface = 14;
-    public const int Speed = 15;
-    public const int SyncTransformPosition = 16;
-    public const int PositionOffset = 17;
-    public const int Transform = 18;
-    public const int WorldPosition = 19;
+    public const int Grounded = 5;
+    public const int GroundHit = 6;
+    public const int SurfaceNormal = 7;
+    public const int Hero = 8;
+    public const int Id = 9;
+    public const int AffectedByGravity = 10;
+    public const int DesiredVelocity = 11;
+    public const int Direction = 12;
+    public const int MovableByRigidbody = 13;
+    public const int MovementAvailable = 14;
+    public const int Moving = 15;
+    public const int Rigidbody = 16;
+    public const int SlideOnSurface = 17;
+    public const int Speed = 18;
+    public const int SyncTransformPosition = 19;
+    public const int PositionOffset = 20;
+    public const int Transform = 21;
+    public const int WorldPosition = 22;
 
-    public const int TotalComponents = 20;
+    public const int TotalComponents = 23;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -37,6 +40,9 @@ public static class GameComponentsLookup {
         "View",
         "ViewPath",
         "ViewPrefab",
+        "Grounded",
+        "GroundHit",
+        "SurfaceNormal",
         "Hero",
         "Id",
         "AffectedByGravity",
@@ -60,6 +66,9 @@ public static class GameComponentsLookup {
         typeof(ECSWalker.Common.CommonComponents.View),
         typeof(ECSWalker.Common.CommonComponents.ViewPath),
         typeof(ECSWalker.Common.CommonComponents.ViewPrefab),
+        typeof(ECSWalker.Gameplay.GroundDetection.Grounded),
+        typeof(ECSWalker.Gameplay.GroundDetection.GroundHit),
+        typeof(ECSWalker.Gameplay.GroundDetection.SurfaceNormal),
         typeof(ECSWalker.Gameplay.Hero.Hero),
         typeof(ECSWalker.Gameplay.Id),
         typeof(ECSWalker.Gameplay.Movement.AffectedByGravity),
