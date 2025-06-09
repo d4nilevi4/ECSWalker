@@ -14,7 +14,9 @@ namespace ECSWalker.Gameplay.Movement
             _gravityEntities = game.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.AffectedByGravity,
-                    GameMatcher.Rigidbody));
+                    GameMatcher.Rigidbody)
+                .NoneOf(
+                    GameMatcher.Grounded));
         }
 
         public void Execute()

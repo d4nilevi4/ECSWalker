@@ -1,5 +1,6 @@
 ﻿using _Project.Code.Gameplay.Features.Movement;
 using ECSWalker.Common;
+using ECSWalker.Gameplay.GroundDetection;
 using ECSWalker.Gameplay.Hero;
 using ECSWalker.Gameplay.Input;
 using ECSWalker.Infrastructure;
@@ -18,6 +19,7 @@ namespace ECSWalker.Gameplay
             
             Add(systemFactory.Create<HeroFeature>());
             
+            Add(systemFactory.Create<GroundDetectionFeature>());
             Add(systemFactory.Create<MovementFeature>());
         }
     }

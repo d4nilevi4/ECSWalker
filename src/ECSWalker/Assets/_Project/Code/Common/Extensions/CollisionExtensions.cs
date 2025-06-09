@@ -5,7 +5,7 @@ namespace ECSWalker.Common
     [Flags]
     public enum CollisionLayer
     {
-        // Ground = 1 << 8,
+        Ground = 1 << 6,
         // Enemy = 1 << 9,
         // Hero = 1 << 10,
     }
