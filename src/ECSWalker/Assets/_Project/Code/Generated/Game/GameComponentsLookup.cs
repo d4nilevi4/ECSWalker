@@ -34,11 +34,12 @@ public static class GameComponentsLookup {
     public const int Rotation = 23;
     public const int RotationAvailable = 24;
     public const int RotationSpeed = 25;
-    public const int SyncTransformRotation = 26;
-    public const int Transform = 27;
-    public const int WorldPosition = 28;
+    public const int SyncRigidbodyRotation = 26;
+    public const int SyncTransformRotation = 27;
+    public const int Transform = 28;
+    public const int WorldPosition = 29;
 
-    public const int TotalComponents = 29;
+    public const int TotalComponents = 30;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -67,6 +68,7 @@ public static class GameComponentsLookup {
         "Rotation",
         "RotationAvailable",
         "RotationSpeed",
+        "SyncRigidbodyRotation",
         "SyncTransformRotation",
         "Transform",
         "WorldPosition"
@@ -99,6 +101,7 @@ public static class GameComponentsLookup {
         typeof(ECSWalker.Gameplay.Rotation.Rotation),
         typeof(ECSWalker.Gameplay.Rotation.RotationAvailable),
         typeof(ECSWalker.Gameplay.Rotation.RotationSpeed),
+        typeof(ECSWalker.Gameplay.Rotation.SyncRigidbodyRotation),
         typeof(ECSWalker.Gameplay.Rotation.SyncTransformRotation),
         typeof(ECSWalker.Gameplay.TransformComponent),
         typeof(ECSWalker.Gameplay.WorldPosition)

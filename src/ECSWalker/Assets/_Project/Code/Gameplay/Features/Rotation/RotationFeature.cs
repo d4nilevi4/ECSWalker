@@ -8,6 +8,7 @@ namespace ECSWalker.Gameplay.Rotation
         public RotationFeature(ISystemFactory systemFactory)
         {
             Add(systemFactory.Create<SyncEntityRotationWithTransformSystem>());
+            Add(systemFactory.Create<SyncEntityRotationWithRigidbodySystem>());
         }
     }
 }
