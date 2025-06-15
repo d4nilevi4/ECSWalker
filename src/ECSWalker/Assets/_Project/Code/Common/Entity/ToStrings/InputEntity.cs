@@ -35,9 +35,13 @@ public sealed partial class InputEntity : INamedEntity
                 switch (component.GetType().Name)
                 {
                     case nameof(WorldInput):
-                        return PrintWorldInput();
+                        return nameof(WorldInput);
                     case nameof(CameraRelativeInput):
-                        return PrintCameraRelativeInput();
+                        return nameof(CameraRelativeInput);
+                    case nameof(RawRotationInput):
+                        return nameof(RawRotationInput);
+                    case nameof(NormalizedRotationInput):
+                        return nameof(NormalizedRotationInput);
                 }
             }
         }
@@ -47,16 +51,6 @@ public sealed partial class InputEntity : INamedEntity
         }
 
         return components.First().GetType().Name;
-    }
-
-    private string PrintWorldInput()
-    {
-        return "WorldInput";
-    }
-
-    private string PrintCameraRelativeInput()
-    {
-        return "CameraRelativeInput";
     }
 
     public string BaseToString() => base.ToString();
