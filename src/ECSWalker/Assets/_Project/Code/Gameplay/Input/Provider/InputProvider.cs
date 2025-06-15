@@ -9,7 +9,8 @@ namespace ECSWalker.Gameplay.Input
         private readonly PlayerInputActions _input = new();
 
         public bool HasAxisInput => GetInputAxis().magnitude >= 0.1f;
-
+        public bool HasRotationInput => GetInputRotation().magnitude >= 0.1f;
+        
         public void Initialize()
         {
             _input.Enable();
@@ -17,6 +18,9 @@ namespace ECSWalker.Gameplay.Input
 
         public Vector2 GetInputAxis() => 
             _input.Movement.InputAxis.ReadValue<Vector2>();
+        
+        public Vector2 GetInputRotation( ) => 
+            _input.Movement.Rotation.ReadValue<Vector2>();
 
         public void Dispose()
         {

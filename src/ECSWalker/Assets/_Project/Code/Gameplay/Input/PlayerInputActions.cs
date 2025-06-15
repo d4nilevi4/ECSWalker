@@ -37,6 +37,15 @@ namespace ECSWalker.Gameplay.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Rotation"",
+                    ""type"": ""Value"",
+                    ""id"": ""553667f4-737b-451a-b8aa-c3f38178beb8"",
+                    ""expectedControlType"": ""Delta"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -94,6 +103,17 @@ namespace ECSWalker.Gameplay.Input
                     ""action"": ""InputAxis"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3f6ca104-8c75-49eb-95c2-47604fada51e"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -103,6 +123,7 @@ namespace ECSWalker.Gameplay.Input
             // Movement
             m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
             m_Movement_InputAxis = m_Movement.FindAction("InputAxis", throwIfNotFound: true);
+            m_Movement_Rotation = m_Movement.FindAction("Rotation", throwIfNotFound: true);
         }
 
         ~@PlayerInputActions()
@@ -170,11 +191,13 @@ namespace ECSWalker.Gameplay.Input
         private readonly InputActionMap m_Movement;
         private List<IMovementActions> m_MovementActionsCallbackInterfaces = new List<IMovementActions>();
         private readonly InputAction m_Movement_InputAxis;
+        private readonly InputAction m_Movement_Rotation;
         public struct MovementActions
         {
             private @PlayerInputActions m_Wrapper;
             public MovementActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @InputAxis => m_Wrapper.m_Movement_InputAxis;
+            public InputAction @Rotation => m_Wrapper.m_Movement_Rotation;
             public InputActionMap Get() { return m_Wrapper.m_Movement; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -187,6 +210,9 @@ namespace ECSWalker.Gameplay.Input
                 @InputAxis.started += instance.OnInputAxis;
                 @InputAxis.performed += instance.OnInputAxis;
                 @InputAxis.canceled += instance.OnInputAxis;
+                @Rotation.started += instance.OnRotation;
+                @Rotation.performed += instance.OnRotation;
+                @Rotation.canceled += instance.OnRotation;
             }
 
             private void UnregisterCallbacks(IMovementActions instance)
@@ -194,6 +220,9 @@ namespace ECSWalker.Gameplay.Input
                 @InputAxis.started -= instance.OnInputAxis;
                 @InputAxis.performed -= instance.OnInputAxis;
                 @InputAxis.canceled -= instance.OnInputAxis;
+                @Rotation.started -= instance.OnRotation;
+                @Rotation.performed -= instance.OnRotation;
+                @Rotation.canceled -= instance.OnRotation;
             }
 
             public void RemoveCallbacks(IMovementActions instance)
@@ -214,6 +243,7 @@ namespace ECSWalker.Gameplay.Input
         public interface IMovementActions
         {
             void OnInputAxis(InputAction.CallbackContext context);
+            void OnRotation(InputAction.CallbackContext context);
         }
     }
 }
