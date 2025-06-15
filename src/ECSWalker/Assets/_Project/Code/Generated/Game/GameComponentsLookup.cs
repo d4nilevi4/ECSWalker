@@ -29,10 +29,16 @@ public static class GameComponentsLookup {
     public const int Speed = 18;
     public const int SyncTransformPosition = 19;
     public const int PositionOffset = 20;
-    public const int Transform = 21;
-    public const int WorldPosition = 22;
+    public const int RotateByMouseInput = 21;
+    public const int RotateTowardsVelocity = 22;
+    public const int Rotation = 23;
+    public const int RotationAvailable = 24;
+    public const int RotationSpeed = 25;
+    public const int SyncTransformRotation = 26;
+    public const int Transform = 27;
+    public const int WorldPosition = 28;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 29;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -56,6 +62,12 @@ public static class GameComponentsLookup {
         "Speed",
         "SyncTransformPosition",
         "PositionOffset",
+        "RotateByMouseInput",
+        "RotateTowardsVelocity",
+        "Rotation",
+        "RotationAvailable",
+        "RotationSpeed",
+        "SyncTransformRotation",
         "Transform",
         "WorldPosition"
     };
@@ -82,6 +94,12 @@ public static class GameComponentsLookup {
         typeof(ECSWalker.Gameplay.Movement.Speed),
         typeof(ECSWalker.Gameplay.Movement.SyncTransformPosition),
         typeof(ECSWalker.Gameplay.PositionOffset),
+        typeof(ECSWalker.Gameplay.Rotation.RotateByMouseInput),
+        typeof(ECSWalker.Gameplay.Rotation.RotateTowardsVelocity),
+        typeof(ECSWalker.Gameplay.Rotation.Rotation),
+        typeof(ECSWalker.Gameplay.Rotation.RotationAvailable),
+        typeof(ECSWalker.Gameplay.Rotation.RotationSpeed),
+        typeof(ECSWalker.Gameplay.Rotation.SyncTransformRotation),
         typeof(ECSWalker.Gameplay.TransformComponent),
         typeof(ECSWalker.Gameplay.WorldPosition)
     };
