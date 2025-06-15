@@ -3,6 +3,7 @@ using ECSWalker.Common;
 using ECSWalker.Gameplay.GroundDetection;
 using ECSWalker.Gameplay.Hero;
 using ECSWalker.Gameplay.Input;
+using ECSWalker.Gameplay.Rotation;
 using ECSWalker.Infrastructure;
 
 namespace ECSWalker.Gameplay
@@ -21,6 +22,7 @@ namespace ECSWalker.Gameplay
             
             Add(systemFactory.Create<GroundDetectionFeature>());
             Add(systemFactory.Create<MovementFeature>());
+            Add(systemFactory.Create<RotationFeature>());
         }
     }
 }
