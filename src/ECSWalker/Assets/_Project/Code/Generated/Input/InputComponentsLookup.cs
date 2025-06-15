@@ -12,15 +12,19 @@ public static class InputComponentsLookup {
     public const int CameraRelativeInput = 1;
     public const int Input = 2;
     public const int InputAxis = 3;
-    public const int WorldInput = 4;
+    public const int NormalizedRotationInput = 4;
+    public const int RawRotationInput = 5;
+    public const int WorldInput = 6;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
         "Destructed",
         "CameraRelativeInput",
         "Input",
         "InputAxis",
+        "NormalizedRotationInput",
+        "RawRotationInput",
         "WorldInput"
     };
 
@@ -29,6 +33,8 @@ public static class InputComponentsLookup {
         typeof(ECSWalker.Gameplay.Input.CameraRelativeInput),
         typeof(ECSWalker.Gameplay.Input.Input),
         typeof(ECSWalker.Gameplay.Input.InputAxis),
+        typeof(ECSWalker.Gameplay.Input.NormalizedRotationInput),
+        typeof(ECSWalker.Gameplay.Input.RawRotationInput),
         typeof(ECSWalker.Gameplay.Input.WorldInput)
     };
 }

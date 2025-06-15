@@ -15,6 +15,14 @@ namespace ECSWalker.Gameplay.Input
             CreateInputEntity.Empty()
                 .With(x => x.isInput = true)
                 .With(x => x.isCameraRelativeInput = true);
+            
+            CreateInputEntity.Empty()
+                .With(x => x.isInput = true)
+                .With(x => x.isRawRotationInput = true);
+            
+            CreateInputEntity.Empty()
+                .With(x => x.isInput = true)
+                .With(x => x.isNormalizedRotationInput = true);
         }
     }
 }

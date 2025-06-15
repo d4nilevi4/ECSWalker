@@ -11,6 +11,8 @@ namespace ECSWalker.Gameplay.Input
             
             Add(systemFactory.Create<EmitWorldInputSystem>());
             Add(systemFactory.Create<EmitCameraRelativeInputSystem>());
+            Add(systemFactory.Create<EmitRawRotationInputSystem>());
+            Add(systemFactory.Create<EmitNormalizedRotationInputSystem>());
             
             Add(systemFactory.Create<TearDownInputSystem>());
         }

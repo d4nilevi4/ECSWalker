@@ -7,6 +7,6 @@ namespace ECSWalker.Gameplay.Input
         bool HasAxisInput { get; }
         bool HasRotationInput { get; }
         Vector2 GetInputAxis();
-        Vector2 GetInputRotation( );
+        Vector2 GetRawRotationInput( );
     }
 }
